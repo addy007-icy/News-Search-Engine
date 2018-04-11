@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Information Retrieval</title>
+   
+	<script type="text/javascript" src="docs/scripts/shCore.js"></script>
+	<script type="text/javascript" src="docs/scripts/shBrushCpp.js"></script>
+	<link type="text/css" rel="stylesheet" href="docs/styles/shCoreEmacs.css"/>
+  	<link type="text/css" rel="stylesheet" href="docs/styles/w3.css">
+  <style>
+    .city {display:none;}
+  </style>
+</head>
+
+<body style="background: rgba(255,255,255); font-family: Helvetica">
+
+
+
+<nav class="w3-sidenav w3-black w3-card-2" style="width:130px">
+  <div class="w3-container">
+    
+  </div>
+  <a href="#" class="tablink" onclick="openTest(event, 'tc0')">Introduction</a>
+  <a href="#" class="tablink" onclick="openTest(event, 'tc01')">Project Design</a>
+  <a href="#" class="tablink" onclick="openTest(event, 'tc02')">Web Scraping</a>
+  <a href="#" class="tablink" onclick="openTest(event, 'tc021')">Data Processing</a>
+  <a href="#" class="tablink" onclick="openTest(event, 'tc022')">Query Processing</a>
+  <a href="#" class="tablink" onclick="openTest(event, 'tc023')">GUI- Code</a>
+  <a href="#" class="tablink" onclick="openTest(event, 'tc03')">Team Members </a>
+ 
+
+  
+
+
+</nav>
+
+<div style="margin-left:130px">
+
+  <div id="tc0" class="w3-container city w3-animate-left">
+    <div class="heading" style="color: black">
+      <h1 style="text-align: center;er; text-decoration:underline;">News Search Engine</h1>
+    </div>
+
+    <div class="tabcontent">
+      <p><br />
+      <br />
+      </p>
+
+      <p><b>Category: Domain Specific Information Retrieval System</b></p>
+
+      <p><b>Document Source: The Hindu Times archives</b></p>
+
+      <p><b>Overview about the project</b></p>
+
+      <p><a name="_GoBack"></a> A News Search Engine was implemented using the Vector Space Model.</p>
+
+      <p><b>Vector Space model</b> is a category of Ranked Retrieval Model which uses cosine similarity between the query and the document to retrieve results. </p>
+
+      <p><b>lnc.ltc</b> weighting scheme was used.</p>
+
+      <p>&gt; Query weighing: Logarithmic tf (term frequency), idf (Document frequency), no cosine normalisation. </p>
+
+      <p>&gt; Document weighing: Logarithmic tf (term frequency), no idf (Document frequency), cosine normalisation.</p>
+
+      <p><br />
+      <br />
+      </p>
+
+      <p><b>Novelty Feature</b></p>
+
+      <ol> <li><p>The News Search comes in an attractive, simple to use GUI that provides the user with the feature to find the required data in microseconds. The user if wished would also be redirected to the original source of the data at www.thehindu.com </p>
+
+      </li>
+      </ol><p>The GUI was made in Python from the PyQt5 Library. </p>
+
+      <ol start="2"> <li><p>The News search also gives relevant to the query, few more suggestions tagged as ‘You may also like’ has been also implemented.</p>
+
+      </li>
+      </ol><ol start="3"><li><p>The time taken to retrieve the search result is also printed.</p></li></ol>
+
+      <p><br />
+      <br />
+      </p>
+
+      <p><b>Task 1: Data Scraping </b> </p>
+
+      <p>To retrieve a document corpus using web scraping tools from any relevant website</p>
+
+      <p><b>Task 2:</b> <b>Document Processing</b></p>
+
+      <p>To process the document corpus using tokenisation, stemming and a document weighing scheme.</p>
+
+      <p><b>Task 3: Query Processing</b></p>
+
+      <p>To process a query using a weighing scheme and getting the cosine similarity scores with all documents to get the best results.</p>
+	
+    </div>
+  </div>
+
+  <div id="tc01" class="w3-container city w3-animate-left">
+    <div class="heading" style="color: black">
+      <h1 style="text-align: center;er; text-decoration:underline;">Project Design</h1>
+    </div>
+    <p>
+     The Assignment Folder includes:
+     <li>websrap.py</li>
+     <li>data_proc.py</li>
+     <li>date.py</li>
+     <li>doc_desc.pickle</li>
+     <li>idf_desc.pickle</li>
+     <li>gui.py: The GUI interface</li>
+     <li>pickle_loader.py</li>
+     <li>query_proc.py</li>
+     <li>READ_ME.txt</li>
+     <li>Documentation.html</li>
+     <br>
+     <hr>
+     Folders: 
+     <li>Documents Containing all the document along with it's data</li>
+     <li>Links - Containing all the links</li>
+     <li>docs- Containing all the html supporting files</li>
+    </p>
+    <hr>
+    <div class="heading" style="color: black">
+        <h6 style="text-align: center;er; text-decoration:underline;">User Interface</h1>
+    </div>
+    <img class="w3-animate-left" src="docs/pics/1.png"><br>
+    <img class="w3-animate-left" src="docs/pics/2.png"><br>
+    <img class="w3-animate-left" src="docs/pics/3.png"><br>
+    <img class="w3-animate-left" src="docs/pics/4.png"><br>
+  </div>
+
+  <div id="tc02" class="w3-container city w3-animate-left">
+    <div class="heading" style="color: black">
+      <h1 style="text-align: center;er; text-decoration:underline;">Web Scraping</h1>
+    </div>
+    <p>
+     	To generate the corpus we selected the target website: <b>thehindu.com</b>
+    </p>
+    <hr>
+ 	<img class="w3-animate-left" src="docs/pics/thehindu.png">
+    <p>
+      The website url stores the archive with year followed by the month number
+      <br>
+      <hr>
+      Following code is used to generate the dates for the year 2016 (data.py):
+      <iframe src="docs/support/datawala.html" style="height: 300px; width: 100%; background: black  "></iframe>
+    </p>
+    
+    <br>
+    <hr>
+    
+    <p>
+      Following code generates the links for each day by importing the dates from <b>date.py</b> and stores the link for all the news in <b>Links</b> folder starting the numbering from 1 (websrap.py):
+      <br>
+      <p><b>Packages</b> Used-
+          <li>beautifulsoup</li>
+          <li>request</li>
+          <br></p>
+      <iframe src="docs/support/scrapper.html" style="height: 800px; width: 100%; background: black  "></iframe>
+    </p>
+
+    <br>
+    <hr>
+
+    <p>
+      Open each text file in <b>Link</b> folder and extract the text document using beautifulsoup storing it in the <b>Documents</b> folder as part of the Corpus with the name of the text file as the <b>Name of the News Article</b> itself (inlink.py): 
+      <iframe src="docs/support/link.html" style="height: 550px; width: 100%; background: black  "></iframe>
+    </p>
+  </div>
+
+  <div id="tc021" class="w3-container city w3-animate-left">
+    <div class="heading" style="color: black">
+      <h1 style="text-align: center;er; text-decoration:underline;">Step 2- Data Processing</h1>
+    </div>
+    <hr>
+    <p>
+      <b>Packages</b> Used-
+      <li>os</li>
+      <li>nltk- Natural Language Tokenizer</li>
+      <li>re- Regliar Expression</li>
+      <li>pickle</li>
+      <br>
+      (data_proc.py)
+      <iframe src="docs/support/data.html" style="height: 550px; width: 100%; background: black  "></iframe>
+    </p>
+    <hr>
+    <p>
+      Data Processing starts with converting the whole text body of individual articles into <b>Lower Case</b>. And tokenization is achived using <b>nltk</b> package. Having removed all the special characters and numbers; the final text contains no stop words and Stemming is done. For the purpose of stemming <b>porter_stemmer</b> is used. For each individual document in the corpus a dtf <b>Dictionary- python data_structure</b> is generated which holds the frequnecy of individual terms in the document. The inverse frequency of each term in the documentm is generated in idf_desc.pickle file by iterating over whole corpus. Final Output are two pickle files:
+      <li>doc_desc.pickle- contains the file decriptor (filename, link, document- term frequency</li> 
+      <li>idf_desc.pickle- contains the idf of each term in the vocabulary as list of dictionary</li>
+    </p>
+    
+  </div>
+  
+  <div id="tc022" class="w3-container city w3-animate-left">
+    <div class="heading" style="color: black">
+      <h1 style="text-align: center;er; text-decoration:underline;">Step 3- Query Processing</h1>
+    </div>
+    <br>
+    <hr>
+    <p>
+      Using the same stemming and tokenization rules as for the data, the query is pre processed. Using vector space model; cosine score is calculated between the query and each document by using the <b>pickle.load</b> fucntion for extracting the idf values for all the legitimate query terms and printing top 10 search results by printing the file name and web link.
+      (query_proc.py)
+      <iframe src="docs/support/query.html" style="height: 500px; width: 100%; background: black  "></iframe>
+    </p>
+    <hr>
+    <p>
+      Supporting file <b>pickle.load</b> code (pickle_loader.py):
+      <br>
+      <iframe src="docs/support/sup.html" style="height: 450px; width: 100%; background: black  "></iframe>
+    </p>
+  </div>
+
+  <div id="tc023" class="w3-container city w3-animate-left">
+  	<iframe src="docs/support/gui.html" style="height: 850px; width: 100%; background: black  "></iframe>
+  </div>
+
+  <div id="tc03" class="w3-container city w3-animate-left">
+    <div class="heading" style="color: black">
+      <h1 style="text-align: center;er; text-decoration:underline;">Team Members</h1>
+      <h2 style="text-align: center;er;">Nischay Gupta- 2015A7PS0063H</h2>
+      <h2 style="text-align: center;er;">Sarthak Rajwanshi- 2015A7PS0129H</h2>
+      <h2 style="text-align: center;er;">Mohit Goyal- 2015A7PS0151H</h2>
+      <h2 style="text-align: center;er;">Aditya Kumar- 2015A7PS0175H</h2>
+    </div>
+  </div>  
+  
+</div>
+
+<script>
+function openTest(evt, testName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(testName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+function show(){
+   var x = document.getElementsByClassName('h');
+   for(var i=0;i<x.length;i++){
+      if(x[i].style.opacity != "1"){
+         x[i].style.opacity = "1";
+      }else{
+         x[i].style.opacity = "0";
+      }
+   }
+}
+window.onload=function(){
+	
+	document.getElementById('tc0').style.display = "block";
+}
+</script>
+
+
+<style>
+.h{
+   opacity:  0;
+   animation: all 0.8s;
+}
+</style>
+
+</body>
+</html>
